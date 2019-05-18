@@ -31,26 +31,20 @@ def dataintegration(file_read_path,version):
         #print(data.shape)
         del data0,i
     print('===================dataintegration_result=========================')
-    print('shape:')
-    print(data.shape)
+    print('shape: (%d,%d)' % data.shape)
     print('capacity_bytes')
     print(set(data.capacity_bytes))
-    print('total_count')
-    print(len(set(data.serial_number)))
-    print('bad_count')
-    print(len(set(data.serial_number[data.failure == 1])))
+    print('total_count: %d' % len(set(data.serial_number)))
+    print('bad_count: %d' % len(set(data.serial_number[data.failure == 1])))
     print('finish')
 
     data.dropna(axis = 0,how = 'any',inplace=True)
     print('after_delete')
-    print('shape:')
-    print(data.shape)
+    print('shape: (%d,%d)' % data.shape)
     print('capacity_bytes')
     print(set(data.capacity_bytes))
-    print('total_count')
-    print(len(set(data.serial_number)))
-    print('bad_count')
-    print(len(set(data.serial_number[data.failure == 1])))
+    print('total_count: %d' % len(set(data.serial_number)))
+    print('bad_count: %d' % len(set(data.serial_number[data.failure == 1])))
 
     del  data['model'] , data['capacity_bytes']
 
