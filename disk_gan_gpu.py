@@ -3,6 +3,7 @@
 Created on Sat Jul  6 19:54:05 2019
 
 @author: zhouhao1
+pytorch=0.4.1
 """
 
 import torch
